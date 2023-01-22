@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h2>Welcome to the Mempy Blog!</h2>
+        <ul>
+            {% for post in posts %} 
+                <li><a href="/blog/detail/{{ post._id }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

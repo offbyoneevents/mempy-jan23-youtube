@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h2>{{ post.title }}</h2>
+        <div>Posted by: <b>{{ post.author }}</b></div>
+        <div>{{ post.body }}</div>
+        <hr>
+            <div>
+                Sentiment: positive={{ avgs[0] }}, negative={{ avgs[1] }}, neutral={{ avgs[2] }}
+            </div>
+        <hr>
+        <ul>
+            {% for comment in post.comments %} 
+                <li>{{ comment.body }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <div>
+            <form method="POST">
+                Leave a Comment <br>
+                <textarea name="body" cols="40" rows="10"></textarea><br>
+                <input type="submit" value="Comment">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Flask
+pymongo
+azure-ai-textanalytics
